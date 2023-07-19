@@ -1,0 +1,20 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Optional: Set the container to full viewport height */
+  }
+  
+  .main-content {
+    display: flex;
+    flex: 1;
+  }
+  
+  .app-leftpanel {
+    flex: 0 0 250px; /* Set a fixed width for the left panel (change as needed) */
+  }
+  
+  .router-content {
+    flex: 1;
+    padding: 20px; /* Optional: Add padding to the router content for spacing */
+  }
+  

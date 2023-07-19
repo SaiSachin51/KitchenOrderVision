@@ -1,0 +1,29 @@
+/* src/app/leftpanel/leftpanel.component.css */
+
+div {
+    background-color: #333;
+    width: 250px;
+    height: 100vh;
+    padding: 10px;
+  }
+  
+  ul {
+    list-style: none;
+    /* padding: 0; */
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 5px 10px;
+  }
+  
+  a.active {
+    font-weight: bold;
+  }
+  
