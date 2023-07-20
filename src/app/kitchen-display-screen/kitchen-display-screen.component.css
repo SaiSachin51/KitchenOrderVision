@@ -1,0 +1,95 @@
+.kitchen-display-container {
+    max-height: 80vh; /* Limit the height of the kitchen display */
+    overflow-y: auto; /* Add vertical scrollbar if needed */
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  /* Styling for the order chits grid */
+  .kitchen-display-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+  }
+  
+  .order {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+  
+  .order-pending {
+    background-color: #ffc;
+  }
+  
+  .order-prepared {
+    background-color: #ff0;
+  }
+  
+  .order-served {
+    background-color: #afa;
+  }
+  
+  .order-actions {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  
+  /* Styling for the buttons */
+  button {
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:disabled {
+    cursor: not-allowed;
+  }
+  
+  /* Different styles for the buttons */
+  button.mark-prepared {
+    background-color: #00b894;
+    color: #fff; /* Set text color to white for better visibility */
+  }
+  
+  button.mark-prepared:hover {
+    background-color: #00a384;
+  }
+  
+  button.mark-served {
+    background-color: #f1c40f;
+    color: #fff; /* Set text color to white for better visibility */
+  }
+  
+  button.mark-served:hover {
+    background-color: #e0b528;
+  }
+  
+  /* Styling for the completed orders section */
+  .completed-orders {
+    position: absolute;
+    top: 77px; /* Adjust the top position as needed */
+    right: 9px; /* Adjust the right position as needed */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-height: 40vh; /* Limit the height of the completed orders section */
+    overflow-y: auto; /* Add vertical scrollbar if needed */
+  }
+  
+  .completed-orders h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .completed-orders .order {
+    margin-bottom: 10px;
+  }
+  

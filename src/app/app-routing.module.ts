@@ -11,21 +11,15 @@ import { GraphsComponent } from './graphs/graphs.component';
 import { KitchenDisplayScreenComponent } from './kitchen-display-screen/kitchen-display-screen.component';
 
 const routes: Routes = [
-  {
-    path: 'kitchen',
-    component: KitchenComponent,
-    children: [
-      { path: 'kds', component: KitchenDisplayScreenComponent },
-      { path: 'inventory', component: InventoryComponent }
-    ]
-  },
-  { path: 'maintenance', component: MaintenanceComponent, children: [
-    { path: 'assets', component: AssetsComponent }
-  ] },
-  { path: 'reports', component: ReportsComponent, children: [
-    { path: 'charts', component: ChartsComponent },
-    { path: 'graphs', component: GraphsComponent }
-  ] },
+  { path: 'kitchen', component: KitchenComponent },
+  { path: 'kds', component: KitchenDisplayScreenComponent },
+  { path: 'inventory', component: InventoryComponent },
+  { path: 'maintenance', component: MaintenanceComponent },
+  { path: 'assets', component: AssetsComponent },
+  { path: 'reports', component: ReportsComponent },
+  { path: 'charts', component: ChartsComponent },
+  { path: 'graphs', component: GraphsComponent },
+  { path: '', redirectTo: '/kitchen', pathMatch: 'full' },
 ];
 
 @NgModule({

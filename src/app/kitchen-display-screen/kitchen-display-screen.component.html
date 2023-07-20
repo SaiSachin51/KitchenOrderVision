@@ -1,4 +1,31 @@
-<div class="component-container">
-    <h1>KDS Component</h1>
+<div class="kitchen-display-container">
+  <h1>Kitchen Display Screen</h1>
+
+  <!-- Completed Orders Section -->
+  <div class="completed-orders" *ngIf="completedOrders.length > 0">
+    <h2>Completed Orders</h2>
+    <div class="order" *ngFor="let order of completedOrders">
+      <h3>Order #{{ order.id }}</h3>
+      <p>Table: {{ order.table }}</p>
+      <ul>
+        <li *ngFor="let item of order.items">{{ item }}</li>
+      </ul>
+    </div>
   </div>
-  
+
+  <!-- Active Orders Section -->
+  <div class="kitchen-display-grid">
+    <div class="order" *ngFor="let order of orders" [ngStyle]="getOrderChitStyle(order)">
+      <h2>Order #{{ order.id }}</h2>
+      <p>Table: {{ order.table }}</p>
+      <ul>
+        <li *ngFor="let item of order.items">{{ item }}</li>
+      </ul>
+      <p *ngIf="order.status === 'pending'">Remaining Time: {{ getFormattedTime(order.remainingTime) }}</p>
+      <div class="order-actions">
+        <button class="button-primary mark-prepared" (click)="updateOrderStatus(order, 'prepared')" [disabled]="order.status !== 'pending'">Mark Prepared</button>
+        <button class="button-secondary mark-served" (click)="updateOrderStatus(order, 'served')" [disabled]="order.status !== 'prepared'">Mark Served</button>
+      </div>
+    </div>
+  </div>
+</div>
