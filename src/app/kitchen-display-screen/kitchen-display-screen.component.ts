@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject, timer } from 'rxjs';
+import { debounceTime } from 'rxjs/operators';
 
 interface Order {
   id: number;
@@ -33,6 +35,9 @@ export class KitchenDisplayScreenComponent  implements OnInit {
   ];
 
   completedOrders: Order[] = [];
+  notificationSubject: Subject<string> = new Subject<string>();
+  notificationMessage: string = '';
+  notificationTimeout: number = 5000; // 5 seconds
 
   ngOnInit() {
     this.startTimers();
@@ -103,5 +108,25 @@ export class KitchenDisplayScreenComponent  implements OnInit {
     return style;
   }
 
-  // Rest of the component code...
+ setupNotificationListener() {
+    this.notificationSubject
+      .pipe(debounceTime(this.notificationTimeout))
+      .subscribe((message: string) => {
+        this.notificationMessage = message;
+        timer(this.notificationTimeout).subscribe(() => {
+          this.clearNotification();
+        });
+      });
+  }
+
+  showNotification(message: string) {
+    this.notificationMessage = message;
+    setTimeout(() => {
+      this.clearNotification();
+    }, this.notificationTimeout);
+  }
+
+  clearNotification() {
+    this.notificationMessage = '';
+  }
 }

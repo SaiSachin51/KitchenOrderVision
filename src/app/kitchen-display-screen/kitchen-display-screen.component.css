@@ -93,3 +93,45 @@
     margin-bottom: 10px;
   }
   
+/* Styling for the notification icon */
+.notification-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #f1c40f;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.notification-icon i {
+  color: #fff;
+  font-size: 20px;
+}
+
+/* Styling for the notification popup */
+.notification-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 80px;
+  background-color: #e74c3c; /* Change the background color to your desired color */
+  color: #fff; /* Change the text color to white for better visibility */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.notification-popup p {
+  margin: 0;
+  color: #fff;
+}
+
+.notification-popup button {
+  margin-top: 10px;
+}

@@ -28,4 +28,20 @@
       </div>
     </div>
   </div>
+  <div class="notification-icon" (click)="showNotification('You have a new notification!')">
+    <i class="fa fa-bell"></i>
+  </div>
+
+  <!-- Notification Popup -->
+<!-- Notification Icon -->
+<div class="notification-icon" (click)="showNotification('You have a new notification!')">
+  <i class="fa fa-bell"></i>
+</div>
+
+<!-- Notification Popup -->
+<div class="notification-popup" *ngIf="notificationMessage">
+  <p>{{ notificationMessage }}</p>
+  <button (click)="clearNotification()">Close</button>
+</div>
+
 </div>
