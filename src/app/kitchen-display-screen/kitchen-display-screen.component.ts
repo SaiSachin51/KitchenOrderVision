@@ -31,6 +31,20 @@ export class KitchenDisplayScreenComponent  implements OnInit {
       status: 'pending',
       remainingTime: 15 * 60, // 15 minutes in seconds (adjust as needed)
     },
+    {
+      id: 3,
+      table: 'Table 3',
+      items: ['7Up', 'Coke', 'Pizza'],
+      status: 'pending',
+      remainingTime: 10 * 60, // 10 minutes in seconds (adjust as needed)
+    },
+    {
+      id: 2,
+      table: 'Table 4',
+      items: ['BlueMoon', 'Coke','Pizza', 'Salad', 'Juice'],
+      status: 'pending',
+      remainingTime: 15 * 60, // 15 minutes in seconds (adjust as needed)
+    },
     // Add more sample orders if needed
   ];
 
