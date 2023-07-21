@@ -1,1 +1,33 @@
-<h1>Charts Component</h1>
+<table>
+    <thead>
+      <tr>
+        <th rowspan="2">Assets</th>
+        <th rowspan="2">9AM - 1 PM</th>
+        <th rowspan="2">1 PM - 5 PM</th>
+        <th rowspan="2">5 PM - 9 PM</th>
+        <th rowspan="2">Average Orders</th>
+        <th rowspan="2">Peak Order Count</th>
+        <th colspan="3">Utilization%</th>
+      </tr>
+      <tr>
+        <th>9AM - 1 PM</th>
+        <th>1 PM - 5 PM</th>
+        <th>5 PM - 9 PM</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Loop through the tableData array -->
+      <tr *ngFor="let row of tableData">
+        <td>{{ row.asset }}</td>
+        <td>{{ row['9AM - 1 PM'] }}</td>
+        <td>{{ row['1 PM - 5 PM'] }}</td>
+        <td>{{ row['5 PM - 9 PM'] }}</td>
+        <td>{{ row['Average Orders'] }}</td>
+        <td>{{ row['Peak Order Count'] }}</td>
+        <td>{{ row['Utilization%']['9AM - 1 PM'] }}</td>
+        <td>{{ row['Utilization%']['1 PM - 5 PM'] }}</td>
+        <td>{{ row['Utilization%']['5 PM - 9 PM'] }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

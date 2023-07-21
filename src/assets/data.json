@@ -1,0 +1,67 @@
+[
+  {
+    "asset": "Espresso",
+    "9AM - 1 PM": "75%",
+    "1 PM - 5 PM": "60%",
+    "5 PM - 9 PM": "80%",
+    "Average Orders": 100,
+    "Peak Order Count": 125,
+    "Utilization%": {
+      "9AM - 1 PM": "80%",
+      "1 PM - 5 PM": "60%",
+      "5 PM - 9 PM": "70%"
+    }
+  },
+  {
+    "asset": "Fryer",
+    "9AM - 1 PM": "50%",
+    "1 PM - 5 PM": "40%",
+    "5 PM - 9 PM": "70%",
+    "Average Orders": 90,
+    "Peak Order Count": 100,
+    "Utilization%": {
+      "9AM - 1 PM": "60%",
+      "1 PM - 5 PM": "50%",
+      "5 PM - 9 PM": "60%"
+    }
+  },
+  {
+    "asset": "Ice Maker",
+    "9AM - 1 PM": "60%",
+    "1 PM - 5 PM": "70%",
+    "5 PM - 9 PM": "85%",
+    "Average Orders": 120,
+    "Peak Order Count": 110,
+    "Utilization%": {
+      "9AM - 1 PM": "75%",
+      "1 PM - 5 PM": "85%",
+      "5 PM - 9 PM": "65%"
+    }
+  },
+  {
+    "asset": "Grills",
+    "9AM - 1 PM": "80%",
+    "1 PM - 5 PM": "50%",
+    "5 PM - 9 PM": "90%",
+    "Average Orders": 80,
+    "Peak Order Count": 95,
+    "Utilization%": {
+      "9AM - 1 PM": "70%",
+      "1 PM - 5 PM": "45%",
+      "5 PM - 9 PM": "50%"
+    }
+  },
+  {
+    "asset": "Electric Ovens",
+    "9AM - 1 PM": "70%",
+    "1 PM - 5 PM": "80%",
+    "5 PM - 9 PM": "75%",
+    "Average Orders": 110,
+    "Peak Order Count": 120,
+    "Utilization%": {
+      "9AM - 1 PM": "65%",
+      "1 PM - 5 PM": "75%",
+      "5 PM - 9 PM": "70%"
+    }
+  }
+]

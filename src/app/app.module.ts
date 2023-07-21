@@ -13,6 +13,7 @@ import { GraphsComponent } from './graphs/graphs.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { ChartsModule } from './charts/charts.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { ChartsModule } from './charts/charts.module';
     BrowserModule,
     RouterModule, // Import RouterModule here
     AppRoutingModule, // Import the AppRoutingModule
-    ChartsModule
+    ChartsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

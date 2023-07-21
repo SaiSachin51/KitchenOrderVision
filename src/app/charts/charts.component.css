@@ -1,10 +1,26 @@
-.container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin-top: 20px;
+table {
+  width: 100%;
+  border-collapse: collapse;
 }
 
-.chart {
-  width: 400px;
+th, td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+thead th {
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+tbody tr:last-child td {
+  border-bottom: 1px solid #ddd; /* Add bottom border to the last row in the body */
+}
+
+/* Responsive styles to fit headers within the page */
+@media screen and (max-width: 600px) {
+  table {
+    font-size: 12px;
+  }
 }
