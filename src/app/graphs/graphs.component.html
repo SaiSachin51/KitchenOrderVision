@@ -1,4 +1,22 @@
-<div class="component-container">
-    <h1>Graphs Component</h1>
-  </div>
-  
+<!-- order-list.component.html -->
+<table class="order-table">
+  <thead>
+    <tr>
+      <th>Order Time</th>
+      <th>Customer Name</th>
+      <th>Order Details</th>
+      <th>Predicted Quantity</th>
+      <!-- Add additional columns if needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Use *ngFor to loop through the orders and display them in the table -->
+    <tr *ngFor="let order of orders">
+      <td>{{ order.orderTime }}</td>
+      <td>{{ order.customerName }}</td>
+      <td>{{ order.orderDetails }}</td>
+      <td>{{ order.predictedQuantity }}</td>
+      <!-- Add additional columns if needed -->
+    </tr>
+  </tbody>
+</table>
