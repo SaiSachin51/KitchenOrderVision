@@ -1,7 +1,19 @@
-<!-- inventory.component.html -->
-
-<div class="component-container">
-  <h1>Inventory Component</h1>
-  <p>This is the Inventory component content.</p>
-  <p>You can add more content here.</p>
+<div class="container">
+  <h2>Kitchen Inventory</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Expiry Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of inventory">
+        <td>{{ item.name }}</td>
+        <td>{{ item.quantity }}</td>
+        <td>{{ item.expiryDate }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>

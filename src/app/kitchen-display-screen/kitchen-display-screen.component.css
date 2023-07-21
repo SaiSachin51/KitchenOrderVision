@@ -116,17 +116,11 @@
 
 /* Styling for the notification popup */
 .notification-popup {
-  position: fixed;
-  bottom: 20px;
-  right: 80px;
-  background-color: #e74c3c; /* Change the background color to your desired color */
-  color: #fff; /* Change the text color to white for better visibility */
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* ... (your previous styles for the notification popup) ... */
+  background-color: #e74c3c;
+  color: #fff;
+  margin-bottom: 10px; /* Add some spacing between notifications */
 }
-
 .notification-popup p {
   margin: 0;
   color: #fff;
@@ -134,4 +128,22 @@
 
 .notification-popup button {
   margin-top: 10px;
+}
+
+/* Styling for the close button (x) */
+.close-button {
+  cursor: pointer;
+  padding: 5px;
+  font-size: 18px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  transition: color 0.3s ease;
+}
+
+.close-button:hover {
+  color: #ccc; /* Change the close button color on hover */
 }

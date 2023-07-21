@@ -31,20 +31,6 @@ export class KitchenDisplayScreenComponent  implements OnInit {
       status: 'pending',
       remainingTime: 15 * 60, // 15 minutes in seconds (adjust as needed)
     },
-    {
-      id: 3,
-      table: 'Table 3',
-      items: ['7Up', 'Coke', 'Pizza'],
-      status: 'pending',
-      remainingTime: 10 * 60, // 10 minutes in seconds (adjust as needed)
-    },
-    {
-      id: 2,
-      table: 'Table 4',
-      items: ['BlueMoon', 'Coke','Pizza', 'Salad', 'Juice'],
-      status: 'pending',
-      remainingTime: 15 * 60, // 15 minutes in seconds (adjust as needed)
-    },
     // Add more sample orders if needed
   ];
 
@@ -52,6 +38,7 @@ export class KitchenDisplayScreenComponent  implements OnInit {
   notificationSubject: Subject<string> = new Subject<string>();
   notificationMessage: string = '';
   notificationTimeout: number = 5000; // 5 seconds
+  notifications: string[] = [];
 
   ngOnInit() {
     this.startTimers();
@@ -128,19 +115,22 @@ export class KitchenDisplayScreenComponent  implements OnInit {
       .subscribe((message: string) => {
         this.notificationMessage = message;
         timer(this.notificationTimeout).subscribe(() => {
-          this.clearNotification();
+          this.clearNotification(message);
         });
       });
   }
 
   showNotification(message: string) {
-    this.notificationMessage = message;
+    this.notifications.push(message);
     setTimeout(() => {
-      this.clearNotification();
+      this.clearNotification(message);
     }, this.notificationTimeout);
   }
 
-  clearNotification() {
-    this.notificationMessage = '';
+  clearNotification(message: string) {
+    const index = this.notifications.indexOf(message);
+    if (index !== -1) {
+      this.notifications.splice(index, 1);
+    }
   }
 }
