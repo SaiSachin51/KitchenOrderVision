@@ -2,9 +2,9 @@
   {
     "asset": "Espresso",
     "date" : "2023-07-05",
-    "9AM - 1 PM": "75%",
-    "1 PM - 5 PM": "60%",
-    "5 PM - 9 PM": "80%",
+    "9AM - 1 PM": "75",
+    "1 PM - 5 PM": "60",
+    "5 PM - 9 PM": "80",
     "Average Orders": 100,
     "Peak Order Count": 125,
     "Utilization%": {
@@ -16,9 +16,9 @@
   {
     "asset": "Fryer",
     "date" : "2023-07-05",
-    "9AM - 1 PM": "50%",
-    "1 PM - 5 PM": "40%",
-    "5 PM - 9 PM": "70%",
+    "9AM - 1 PM": "50",
+    "1 PM - 5 PM": "40",
+    "5 PM - 9 PM": "70",
     "Average Orders": 90,
     "Peak Order Count": 100,
     "Utilization%": {
@@ -30,9 +30,9 @@
   {
     "asset": "Ice Maker",
     "date" : "2023-07-05",
-    "9AM - 1 PM": "60%",
-    "1 PM - 5 PM": "70%",
-    "5 PM - 9 PM": "85%",
+    "9AM - 1 PM": "60",
+    "1 PM - 5 PM": "70",
+    "5 PM - 9 PM": "85",
     "Average Orders": 120,
     "Peak Order Count": 110,
     "Utilization%": {
@@ -44,9 +44,9 @@
   {
     "asset": "Grills",
     "date" : "2023-07-07",
-    "9AM - 1 PM": "80%",
-    "1 PM - 5 PM": "50%",
-    "5 PM - 9 PM": "90%",
+    "9AM - 1 PM": "80",
+    "1 PM - 5 PM": "50",
+    "5 PM - 9 PM": "90",
     "Average Orders": 80,
     "Peak Order Count": 95,
     "Utilization%": {
@@ -58,9 +58,9 @@
   {
     "asset": "Electric Ovens",
     "date" : "2023-07-07",
-    "9AM - 1 PM": "70%",
-    "1 PM - 5 PM": "80%",
-    "5 PM - 9 PM": "75%",
+    "9AM - 1 PM": "70",
+    "1 PM - 5 PM": "80",
+    "5 PM - 9 PM": "75",
     "Average Orders": 110,
     "Peak Order Count": 120,
     "Utilization%": {
