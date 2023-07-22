@@ -19,7 +19,10 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatInputModule } from '@angular/material/input';
 import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -33,8 +36,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     GraphsComponent,
     LeftPanelComponent,
     TopbarComponent,
-    ChartsComponent,
-   
+    ChartsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +44,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule, // Import the AppRoutingModule
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

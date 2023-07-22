@@ -2,15 +2,15 @@
 [
   {
     "itemName": "Mushroom Rice",
-   "quality": 6 
+   "quantity": 6 
   },
   {
     "itemName": "Garlic Naan",
-   "quality": 5 
+   "quantity": 5 
   },
   {
     "itemName": "Mango Chutney",
-   "quality": 3 
+   "quantity": 3 
   }
 ]
  

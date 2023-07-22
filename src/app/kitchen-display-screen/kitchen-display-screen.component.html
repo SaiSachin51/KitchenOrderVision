@@ -23,12 +23,14 @@
       </ul>
       <p *ngIf="order.status === 'pending'">Remaining Time: {{ getFormattedTime(order.remainingTime) }}</p>
       <div class="order-actions">
-        <button class="button-primary mark-prepared" (click)="updateOrderStatus(order, 'prepared')" [disabled]="order.status !== 'pending'">Mark Prepared</button>
-        <button class="button-secondary mark-served" (click)="updateOrderStatus(order, 'served')" [disabled]="order.status !== 'prepared'">Mark Served</button>
+        <button class="button-primary mark-prepared" (click)="updateOrderStatus(order, 'prepared')"
+          [disabled]="order.status !== 'pending'">Mark Prepared</button>
+        <button class="button-secondary mark-served" (click)="updateOrderStatus(order, 'served')"
+          [disabled]="order.status !== 'prepared'">Mark Served</button>
       </div>
     </div>
   </div>
-  <div class="notification-icon" (click)="showNotification('You have a new notification!')">
+  <!-- <div class="notification-icon" (click)="showNotification('You have a new notification!')">
     <i class="fa fa-bell"></i>
   </div>
 
@@ -40,6 +42,16 @@
   <div class="notification-popup" *ngFor="let notification of notifications">
     <p>{{ notification }}</p>
     <button class="close-button" (click)="clearNotification(notification)">&times;</button>
+  </div> -->
+  <div class="notification-icon">
+    <button mat-icon-button [matMenuTriggerFor]="menu"  (click)="toggleBadgeVisibility()" aria-label="Example icon-button with a menu">
+      <mat-icon matBadge="{{items.length}}" [matBadgeHidden]="hidden" matBadgeColor="warn">notifications</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item *ngFor="let item of items" >
+        <mat-icon>restaurant_menu</mat-icon>
+        <span> {{item.itemName}} x {{item.quantity}}</span>
+      </button>
+    </mat-menu>
   </div>
-
 </div>

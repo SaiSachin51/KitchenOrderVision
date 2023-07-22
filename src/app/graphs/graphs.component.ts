@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Chart, ChartOptions } from 'chart.js'; // Make sure to include ChartOptions here
+import { Chart, ChartOptions, registerables } from 'chart.js'; // Make sure to include ChartOptions here
 
 @Component({
   selector: 'app-graphs',
@@ -11,7 +11,13 @@ export class GraphsComponent {
   formData: any = {};
   submittedData: any[] = [];
   radarChart!: Chart; // Use non-null assertion operator (!)
-
+/**
+ *
+ */
+constructor() {
+  Chart.register(...registerables);
+  
+}
   onSubmit() {
     // Here, you would handle the form submission logic and populate the submittedData array
     // For demonstration purposes, I'll populate it with sample data.

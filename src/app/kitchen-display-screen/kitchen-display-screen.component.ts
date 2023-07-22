@@ -1,15 +1,20 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject, timer } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
+import { HttpClient } from '@angular/common/http';
 
+interface Items {
+  itemName: string,
+  quantity: number
+}
 interface Order {
   id: number;
   table: string;
   items: string[];
   status: 'pending' | 'prepared' | 'served';
   remainingTime: number;
-}
 
+}
 @Component({
   selector: 'app-kitchen-display-screen',
   templateUrl: './kitchen-display-screen.component.html',
@@ -33,12 +38,18 @@ export class KitchenDisplayScreenComponent  implements OnInit {
     },
     // Add more sample orders if needed
   ];
-
+items: Items[] = [];
   completedOrders: Order[] = [];
   notificationSubject: Subject<string> = new Subject<string>();
   notificationMessage: string = '';
   notificationTimeout: number = 5000; // 5 seconds
   notifications: string[] = [];
+
+  constructor(private http: HttpClient) {
+
+    this.fetchData();
+
+  }
 
   ngOnInit() {
     this.startTimers();
@@ -109,6 +120,15 @@ export class KitchenDisplayScreenComponent  implements OnInit {
     return style;
   }
 
+  fetchData() {
+
+    this.http.get<any[]>('assets/PredictionData.json').subscribe((data) => {
+
+      this.items = data; // Assign the JSON data to the tableData array
+
+    });
+  }
+
  setupNotificationListener() {
     this.notificationSubject
       .pipe(debounceTime(this.notificationTimeout))
@@ -132,5 +152,10 @@ export class KitchenDisplayScreenComponent  implements OnInit {
     if (index !== -1) {
       this.notifications.splice(index, 1);
     }
+  }
+  hidden = false;
+
+  toggleBadgeVisibility() {
+    this.hidden = !this.hidden;
   }
 }
