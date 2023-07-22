@@ -1,5 +1,6 @@
-<h2 class="header">Enter Data</h2>
-<form (ngSubmit)="onSubmit()" class="form">
+<div class="container">
+  <h2 class="header">Enter Data</h2>
+  <form (ngSubmit)="onSubmit()" class="form">
   <label for="itemId">ItemId:</label>
   <input type="text" id="itemId" name="itemId" [(ngModel)]="formData.itemId" required>
 
@@ -19,8 +20,9 @@
 </form>
 
 <h2 class="header">Predictive Data</h2>
-<canvas *ngIf="submittedData" id="radarChart" class="radar-chart"></canvas>
-
+<div class="chart-container">
+  <canvas *ngIf="submittedData" id="radarChart" class="radar-chart"></canvas>
+</div>
 <table *ngIf="submittedData" class="data-table">
   <thead>
     <tr>
@@ -35,3 +37,4 @@
     </tr>
   </tbody>
 </table>
+</div>
