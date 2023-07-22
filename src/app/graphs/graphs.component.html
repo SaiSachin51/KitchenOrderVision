@@ -1,22 +1,35 @@
-<!-- order-list.component.html -->
-<table class="order-table">
+<h2 class="header">Enter Data</h2>
+<form (ngSubmit)="onSubmit()" class="form">
+  <label for="itemId">ItemId:</label>
+  <input type="text" id="itemId" name="itemId" [(ngModel)]="formData.itemId" required>
+
+  <label for="weekDay">WeekDay:</label>
+  <input type="text" id="weekDay" name="weekDay" [(ngModel)]="formData.weekDay" required>
+
+  <label for="day">Day:</label>
+  <input type="text" id="day" name="day" [(ngModel)]="formData.day" required>
+
+  <label for="month">Month:</label>
+  <input type="text" id="month" name="month" [(ngModel)]="formData.month" required>
+
+  <label for="year">Year:</label>
+  <input type="text" id="year" name="year" [(ngModel)]="formData.year" required>
+
+  <button type="submit" class="submit-button">Submit</button>
+</form>
+
+<h2 class="header">Predictive Data</h2>
+<table *ngIf="submittedData" class="data-table">
   <thead>
     <tr>
-      <th>Order Time</th>
-      <th>Customer Name</th>
-      <th>Order Details</th>
-      <th>Predicted Quantity</th>
-      <!-- Add additional columns if needed -->
+      <th>Item Name</th>
+      <th>Quality</th>
     </tr>
   </thead>
   <tbody>
-    <!-- Use *ngFor to loop through the orders and display them in the table -->
-    <tr *ngFor="let order of orders">
-      <td>{{ order.orderTime }}</td>
-      <td>{{ order.customerName }}</td>
-      <td>{{ order.orderDetails }}</td>
-      <td>{{ order.predictedQuantity }}</td>
-      <!-- Add additional columns if needed -->
+    <tr *ngFor="let item of submittedData">
+      <td>{{ item.itemName }}</td>
+      <td>{{ item.quality }}</td>
     </tr>
   </tbody>
 </table>

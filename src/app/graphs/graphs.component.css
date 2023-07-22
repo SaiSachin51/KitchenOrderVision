@@ -1,0 +1,76 @@
+/* Styles for form container */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    margin-bottom: 20px;
+  }
+  
+  /* Styles for form */
+  .form {
+    display: flex;
+    flex-direction: row; /* Display input fields horizontally */
+    flex-wrap: wrap; /* Wrap to the next line if needed */
+    justify-content: space-between; /* Align input fields to the left and right respectively */
+    align-items: center; /* Center vertically */
+    gap: 10px; /* Add some space between input fields */
+  }
+  
+  .form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .form input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 150px; /* Reduced input box width */
+  }
+  
+  .submit-button {
+    padding: 8px 16px; /* Reduced padding for the submit button */
+    background-color: black; /* Black color for the submit button */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Styles for table */
+  .data-table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #ccc; /* Add a border to the table */
+  }
+  
+  .data-table th,
+  .data-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc; /* Add vertical lines between cells */
+  }
+  
+  .data-table th {
+    background-color: black; /* Black color for table header */
+    color: #fff;
+  }
+  
+  .header {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 24px;
+  }
+  
+  /* Set border-right for all th elements to display vertical lines between columns */
+  .data-table th {
+    border-right: 1px solid #ccc;
+  }
+  
+  /* Remove the right border for the last column */
+  .data-table th:last-child,
+  .data-table td:last-child {
+    border-right: none;
+  }
+  
