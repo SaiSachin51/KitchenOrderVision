@@ -39,10 +39,10 @@
   </div>
   
   <!-- Notification Popups -->
-  <div class="notification-popup" *ngFor="let notification of notifications">
+  <!-- <div class="notification-popup" *ngFor="let notification of notifications">
     <p>{{ notification }}</p>
     <button class="close-button" (click)="clearNotification(notification)">&times;</button>
-  </div> -->
+  </div>  -->
   <div class="notification-icon">
     <button mat-icon-button [matMenuTriggerFor]="menu"  (click)="toggleBadgeVisibility()" aria-label="Example icon-button with a menu">
       <mat-icon matBadge="{{items.length}}" [matBadgeHidden]="hidden" matBadgeColor="warn">notifications</mat-icon>
