@@ -15,6 +15,9 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ChartsComponent } from './charts/charts.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatInputModule } from '@angular/material/input';
+import { MatNativeDateModule } from '@angular/material/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -31,6 +34,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     LeftPanelComponent,
     TopbarComponent,
     ChartsComponent,
+   
   ],
   imports: [
     BrowserModule,

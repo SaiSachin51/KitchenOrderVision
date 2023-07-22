@@ -19,6 +19,8 @@
 </form>
 
 <h2 class="header">Predictive Data</h2>
+<canvas *ngIf="submittedData" id="radarChart" class="radar-chart"></canvas>
+
 <table *ngIf="submittedData" class="data-table">
   <thead>
     <tr>
