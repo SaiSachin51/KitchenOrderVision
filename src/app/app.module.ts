@@ -12,8 +12,10 @@ import { ReportsComponent } from './reports/reports.component';
 import { GraphsComponent } from './graphs/graphs.component';
 import { LeftPanelComponent } from './left-panel/left-panel.component';
 import { TopbarComponent } from './topbar/topbar.component';
-import { ChartsModule } from './charts/charts.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ChartsComponent } from './charts/charts.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -27,14 +29,16 @@ import { HttpClientModule } from '@angular/common/http';
     ReportsComponent,
     GraphsComponent,
     LeftPanelComponent,
-    TopbarComponent
+    TopbarComponent,
+    ChartsComponent,
   ],
   imports: [
     BrowserModule,
     RouterModule, // Import RouterModule here
     AppRoutingModule, // Import the AppRoutingModule
-    ChartsModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

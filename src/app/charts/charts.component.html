@@ -1,4 +1,11 @@
-<table>
+<label for="selectedDate">Select a Date:</label>
+<input type="date" id="selectedDate"/>
+<input type="date" id="selectedDate" [(ngModel)]="selectedDate" (change)="onDateSelected()" />
+
+<br>
+<br>
+
+<table  *ngIf="selectedDate">
     <thead>
       <tr>
         <th rowspan="2">Assets</th>
@@ -17,7 +24,7 @@
     </thead>
     <tbody>
       <!-- Loop through the tableData array -->
-      <tr *ngFor="let row of tableData">
+      <tr *ngFor="let row of filteredTableData">
         <td>{{ row.asset }}</td>
         <td>{{ row['9AM - 1 PM'] }}</td>
         <td>{{ row['1 PM - 5 PM'] }}</td>
